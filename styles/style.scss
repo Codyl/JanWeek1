@@ -1,0 +1,76 @@
+body {
+    background-color: black;
+}
+.row {
+    .block {
+        background-color: hsl(283, 38%, 65%);
+        margin: 5px;
+    }
+}
+.jump {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    transition: 0.5s;
+    transition-timing-function:cubic-bezier(1, 0.2, 0.165, 1);
+}
+.jump:hover {  
+    top: -10px;
+    right: 5px;
+    text-shadow: 5px 10px 7px;
+}
+.show {
+    opacity: 10%;
+    transition: 0.4s;
+}
+.show:hover {
+    opacity: 100%;
+}
+.reflect {
+    /* Fallback: Set a background color. */
+  background-color: black;
+  
+  /* Create the gradient. */
+
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.reflect:hover {
+    animation-name: reflection;
+    animation-duration: 5s;
+}
+@keyframes reflection {
+    0% {
+        background-color: black;
+    }
+    1% {
+        background-image: repeating-linear-gradient(45deg, black 0px, black 85px, white 100px);
+    }
+    90% {
+        background-position: -500px;
+        
+    }
+}
+.exampleBlock {
+    border: 2px dotted black;
+    height: 100px;
+    width: auto;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+#exampleText {
+    
+  font-size: xxx-large;
+  font-weight: 800;
+}
